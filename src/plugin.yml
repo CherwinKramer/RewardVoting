@@ -1,0 +1,11 @@
+name: RewardVoting
+version: 2.0
+main: votepackage.main
+description: Reward your players for voting.
+depend: [Votifier]
+
+commands:
+	rewardvoting:
+		usage: /<command>
+		aliases: rv
+		description: The rewardvoting base command.
