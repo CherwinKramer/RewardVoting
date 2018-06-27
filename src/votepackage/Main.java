@@ -66,9 +66,13 @@ public class Main extends JavaPlugin implements Listener{
 				} else if (args[0].equalsIgnoreCase("votes")) {
 					sender.sendMessage(displayColoredText(getConfig().getString("header")) + displayColoredText(getConfig().getString("server_vote").replace("{votes}", settings.getData().getString("server_votes"))));
 				} else if (args[0].equalsIgnoreCase("player")) {
-					
+					sender.sendMessage(displayColoredText(getConfig().getString("header")) + sender.getName());
+					sender.sendMessage(ChatColor.DARK_AQUA + " Last joined: " + ChatColor.RESET + settings.getData().getString("players." + sender.getName() + ".last_joined"));
+					sender.sendMessage(ChatColor.DARK_AQUA + " Votes: " + ChatColor.RESET + settings.getData().getString("players." + sender.getName() + ".votes"));
+					sender.sendMessage(ChatColor.DARK_AQUA + " Queued votes: " + ChatColor.RESET + settings.getData().getString("players." + sender.getName() + ".queued_votes"));
+
 				} else {
-					
+					sender.sendMessage("Unknown command");
 				}
 			}
 		} else if (cmd.getName().equalsIgnoreCase("vote")) {
