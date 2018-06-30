@@ -1,5 +1,5 @@
 name: RewardVoting
-version: 2.0
+version: 8.0
 main: votepackage.Main
 description: Reward your players for voting.
 depend: [Votifier]
@@ -15,4 +15,4 @@ commands:
         description: Shows the available vote websites.
     test:
         usage: /<command>
-        description: Test command to test features.
+        description: Rewardvoting developer testing command.
